@@ -1,13 +1,14 @@
 <script>
-    
+import productLength from './Page.svelte'
 </script>
 <main>
 <nav>
     <ul>
-        <li>E-Commerce App</li>
-        <li> <span>0</span><img src="https://img.icons8.com/?size=1x&id=13014&format=png" alt="cart image"></li>
+        <li>Shopify</li>
+        <li><img src="https://img.icons8.com/?size=1x&id=13014&format=png" alt="cart image"></li>
     </ul>
 </nav>
+
 </main>
 
 <style>
@@ -15,7 +16,6 @@
     *{
         margin:0;
         padding:0;
-        
     }
     span{
         position: absolute;
@@ -25,11 +25,12 @@
     nav{
         color:white;
         padding:5px;
-        height:80px;
+        height:50px;
         box-shadow:1px -5px 26px 10px blue;
     }
     ul{
         display: flex;
+        position: relative;
     }
     li:nth-child(1){
         font-size:30px;
@@ -38,7 +39,7 @@
         padding-left:20px;
     }
     li:nth-child(2){
-        padding-top:13px;
+        padding-top:3%;
     }
     ul>li{
         list-style-type: none;
