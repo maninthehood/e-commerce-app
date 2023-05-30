@@ -2,7 +2,7 @@
     
 </script>
 <main>
-Page
+
 </main>
 
 <style>
