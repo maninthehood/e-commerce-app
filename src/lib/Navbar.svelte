@@ -5,7 +5,7 @@
 <main>
 <nav>
     <ul>
-        <li>Shopify</li>
+        <li><a href="Cart.svelte">Shopify</a></li>
         <li><img src="https://img.icons8.com/?size=1x&id=13014&format=png" alt="cart"></li>
     </ul>
 </nav>
@@ -13,7 +13,15 @@
 </main>
 
 <style>
-
+    a{
+        text-decoration:none;
+        color:inherit;
+        transition:500ms;
+    }
+    a:hover{
+        color:green;
+        transition:500ms;
+    }
     *{
         margin:0;
         padding:0;
