@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 
- let products = [
+ let products:any = [
   {
     id: 1,
     name: 'Iphone 14 Pro Max',
@@ -24,11 +24,7 @@
     bought: false,
   },
 ];
-let showCheckout = false;
-  export function toggle() {
-      alert("Checkout being rendered")
-    showCheckout = !showCheckout;
-  }
+
 </script>
 <main>
 {#each products as product}
@@ -48,31 +44,7 @@ let showCheckout = false;
     <div>
 </div>
 
-      {#if showCheckout}
-        <div class="checkout">
-          <div class="checkout-title">
-            <h2>Checkout</h2>
-          </div>
-          <hr />
-          <div class="checkout-items">
-            {#each products as cartItem}
-              {#if cartItem.bought}
-                <div class="cart-item">
-                  <img class="cart-img" src={cartItem.img} alt="cart" />
-                  <div
-                    style="border-left:1px solid #000;height:100px;margin-right:1rem;margin-left:1rem;"
-                  />
-                  <p>Price:</p>
-                  <p>{cartItem.price}</p>
-                </div>
-                <hr/>
-              {/if}
-            {/each}
-          </div>
-        </div>
-      {/if}
 {/each}
-
 
 
 </main>

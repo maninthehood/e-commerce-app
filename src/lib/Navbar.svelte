@@ -18,11 +18,6 @@
         margin:0;
         padding:0;
     }
-    span{
-        position: absolute;
-        top:0;
-        border-radius:999999px;
-    }
     nav{
         color:white;
         padding:5px;
