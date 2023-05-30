@@ -3,14 +3,17 @@ import { products } from './products.svelte'
 
 let cartItems = [];
 
-function pushToCart(){
-    return products.filter(product => !products.bought)
-}
-
 function toggleBought(product){
-    return product.bought = !product.bought;
+    product.bought = !product.bought;
     alert(product.name)
 }
+
+function pushToCart(product){
+    cartItems.push(!product.bought)
+    alert(cartItems.length)
+}
+
+
 </script>
 <main>
 {#if products.length > 0}
@@ -24,7 +27,8 @@ function toggleBought(product){
             <h4>${product.price}</h4>
             <div class="add-to-cart">
                 <!-- <input type="checkbox" id="fnt" bind:value={product.bought}/> -->
-                <button on:click={()=>toggleBought(product)}>Add to Cart</button>
+                <button on:click={()=>toggleBought(product)}>Buy</button>
+                <button on:click={()=>pushToCart(product)}>Add to cart</button>
             </div>
         </div>
     </div>
