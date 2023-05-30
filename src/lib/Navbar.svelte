@@ -1,11 +1,12 @@
 <script>
-import productLength from './Page.svelte'
+
 </script>
+
 <main>
 <nav>
     <ul>
         <li>Shopify</li>
-        <li><img src="https://img.icons8.com/?size=1x&id=13014&format=png" alt="cart image"></li>
+        <li><img src="https://img.icons8.com/?size=1x&id=13014&format=png" alt="cart"></li>
     </ul>
 </nav>
 

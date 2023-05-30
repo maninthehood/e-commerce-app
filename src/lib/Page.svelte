@@ -1,5 +1,6 @@
 <script>
-export let products = [
+
+ let products = [
   {
     id: 1,
     name: 'Iphone 14 Pro Max',
@@ -23,7 +24,11 @@ export let products = [
     bought: false,
   },
 ];
-
+let showCheckout = false;
+  export function toggle() {
+      alert("Checkout being rendered")
+    showCheckout = !showCheckout;
+  }
 </script>
 <main>
 {#each products as product}
@@ -35,15 +40,39 @@ export let products = [
             <h3>{product.name}</h3>
             <h4>${product.price}</h4>
             <div class="add-to-cart">
-                <input type="checkbox" id="fnt"bind:value={product.bought}/>
-                <!-- <button ><label for="fnt">Add to Cart</label></button> -->
+                <input type="checkbox" id="fnt" bind:value={product.bought}/>
+                <button ><label for="fnt">Add to Cart</label></button>
             </div>
         </div>
     </div>
     <div>
-    {product.bought}
 </div>
+
+      {#if showCheckout}
+        <div class="checkout">
+          <div class="checkout-title">
+            <h2>Checkout</h2>
+          </div>
+          <hr />
+          <div class="checkout-items">
+            {#each products as cartItem}
+              {#if cartItem.bought}
+                <div class="cart-item">
+                  <img class="cart-img" src={cartItem.img} alt="cart" />
+                  <div
+                    style="border-left:1px solid #000;height:100px;margin-right:1rem;margin-left:1rem;"
+                  />
+                  <p>Price:</p>
+                  <p>{cartItem.price}</p>
+                </div>
+                <hr/>
+              {/if}
+            {/each}
+          </div>
+        </div>
+      {/if}
 {/each}
+
 
 
 </main>
@@ -59,7 +88,7 @@ export let products = [
         font-family:Noto Sans Mono;
     }
     input{
-        /* display:none; */
+        display:none;
     }
     button{
         cursor: pointer;
