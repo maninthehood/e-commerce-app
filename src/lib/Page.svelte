@@ -28,7 +28,7 @@
 </script>
 <main>
 {#each products as product}
-    <div>
+    <div id="item">
         <div>
         <img src={product.img} alt="">
         </div>
@@ -50,17 +50,20 @@
 </main>
 
 <style lang="css">
-    main{
+      main{
+        display:flex;
+        flex-direction:row;
         margin-bottom:100vh;
-        display:grid;
-        place-items:center;
-        text-align:center;
-    }
+      }
+
     h4{
         font-family:Noto Sans Mono;
     }
     input{
         display:none;
+    }
+    #item{
+
     }
     button{
         cursor: pointer;
@@ -83,7 +86,17 @@
         transform: scale(1.1)
     }
 
+       img{
+            margin-top:40px;
+            height:350px;
+            width:350px;
+        }
     @media (max-width: 800px){
+          main{
+        display:grid;
+        place-items:center;
+        text-align:center;
+    }
         img{
             margin-top:40px;
             height:350px;
