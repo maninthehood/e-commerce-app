@@ -49,7 +49,7 @@
 
 </main>
 
-<style>
+<style lang="css">
     main{
         margin-bottom:100vh;
         display:grid;
