@@ -8,6 +8,6 @@ Page
 <style>
     main{
         position: relative;
-        margin-top:100vh;
+        margin-top:80vh;
     }
 </style>
