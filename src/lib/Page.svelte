@@ -1,6 +1,16 @@
 <script>
 import { products } from './products.svelte'
 
+let cartItems = [];
+
+function pushToCart(){
+    return products.filter(product => !products.bought)
+}
+
+function toggleBought(product){
+    return product.bought = !product.bought;
+    alert(product.name)
+}
 </script>
 <main>
 {#if products.length > 0}
@@ -13,8 +23,8 @@ import { products } from './products.svelte'
             <h3>{product.name}</h3>
             <h4>${product.price}</h4>
             <div class="add-to-cart">
-                <input type="checkbox" id="fnt" bind:value={product.bought}/>
-                <button ><label for="fnt">Add to Cart</label></button>
+                <!-- <input type="checkbox" id="fnt" bind:value={product.bought}/> -->
+                <button on:click={()=>toggleBought(product)}>Add to Cart</button>
             </div>
         </div>
     </div>
@@ -45,9 +55,9 @@ import { products } from './products.svelte'
     h4{
         font-family:Noto Sans Mono;
     }
-    input{
+    /* input{
         display:none;
-    }
+    } */
     #item{
 
     }

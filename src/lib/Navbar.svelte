@@ -1,4 +1,5 @@
 <script>
+import {toggleCart} from './Cart.svelte'
 
 </script>
 
@@ -6,7 +7,7 @@
 <nav>
     <ul>
         <li><a href="Cart.svelte">Shopify</a></li>
-        <li><img src="https://img.icons8.com/?size=1x&id=13014&format=png" alt="cart"></li>
+        <li on:click={toggleCart}><img src="https://img.icons8.com/?size=1x&id=13014&format=png" alt="cart"></li>
     </ul>
 </nav>
 
