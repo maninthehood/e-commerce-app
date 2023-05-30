@@ -9,7 +9,7 @@ function toggleBought(product){
 }
 
 function pushToCart(product){
-    cartItems.push(!product.bought)
+    cartItems.push(product)
     alert(cartItems.length)
 }
 
@@ -26,7 +26,6 @@ function pushToCart(product){
             <h3>{product.name}</h3>
             <h4>${product.price}</h4>
             <div class="add-to-cart">
-                <!-- <input type="checkbox" id="fnt" bind:value={product.bought}/> -->
                 <button on:click={()=>toggleBought(product)}>Buy</button>
                 <button on:click={()=>pushToCart(product)}>Add to cart</button>
             </div>
@@ -40,7 +39,6 @@ function pushToCart(product){
 
 <div class="empty">Shopify Products are unavailable! Check Back Later!</div>
 {/if}
-
 
 
 </main>
@@ -63,7 +61,7 @@ function pushToCart(product){
         display:none;
     } */
     #item{
-
+        border-bottom:0.5px solid;
     }
     button{
         cursor: pointer;
