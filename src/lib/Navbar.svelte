@@ -25,7 +25,7 @@ import productLength from './Page.svelte'
     nav{
         color:white;
         padding:5px;
-        height:50px;
+        height:80px;
         box-shadow:1px -5px 26px 10px blue;
     }
     ul{
